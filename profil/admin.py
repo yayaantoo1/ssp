@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Barang,Jenis
+from .models import Barang,Jenis,About
 
 
 class BarangAdmin(admin.ModelAdmin):
@@ -14,3 +14,5 @@ class BarangAdmin(admin.ModelAdmin):
 admin.site.register(Barang, BarangAdmin)
 
 admin.site.register(Jenis)
+
+admin.site.register(About)
