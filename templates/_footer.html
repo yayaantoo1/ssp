@@ -1,0 +1,58 @@
+<footer class="bg-slate-900 text-gray-400 pt-24 pb-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        {% if about %}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="space-y-4">
+                <h2 class="font-bold text-3xl text-white">ekasaputra</h2>
+                <p class="text-gray-400">
+                    Belajar web programming itu mudah dan menyenangkan bukan. bukan!
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-bold text-xl text-white">Tautan Cepat</h3>
+                <ul class="space-y-2">
+                    <li><a href="#beranda" class="hover:text-primary transition-colors">Beranda</a></li>
+                    <li><a href="#tentangsaya" class="hover:text-primary transition-colors">Tentang Saya</a></li>
+                    <li><a href="#portfolio" class="hover:text-primary transition-colors">Proyek</a></li>
+                    <li><a href="#kontak" class="hover:text-primary transition-colors">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="font-bold text-xl text-white">Terhubung Dengan Saya</h3>
+                <p class="hover:text-primary transition-colors">{{ about.email }}</p>
+                <div class="flex space-x-4">
+                    <a href="{{ about.github }}" target="_blank" aria-label="GitHub" class="hover:text-primary transition-colors">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </a>
+                    <a href="{{ about.linkedin }}" target="_blank" aria-label="LinkedIn" class="hover:text-primary transition-colors">
+                        <i class="fa-brands fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="{{ about.instagram }}" target="_blank" aria-label="Instagram" class="hover:text-primary transition-colors">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="border-t border-gray-700 my-10">
+
+        <div class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+            <p class="text-sm">&copy; <span id="current-year"></span> ekasaputra. All Rights Reserved.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <a href="#beranda" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:opacity-80 transition-opacity">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </a>
+</footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

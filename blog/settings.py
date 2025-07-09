@@ -75,13 +75,16 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
+                #buat auto import untuk footer
+                'profil.context_processors.footer_data',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'blog.wsgi.application'
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases

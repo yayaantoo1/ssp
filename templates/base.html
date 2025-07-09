@@ -1,185 +1,118 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - QuickStart Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: QuickStart
-  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portofolio Saya{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #111827; }
+        .text-primary { color: #14B8A6; }
+        .bg-primary { background-color: #14B8A6; }
+    </style>
 </head>
+<body class="flex flex-col min-h-screen text-gray-300 ">
 
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex justify-between items-center py-6">
+                <a href="#" class="text-xl font-bold text-white tracking-wider">ekasaputra</a>
 
-<body class="index-page">
+                <ul class="hidden md:flex items-center space-x-8 nav-links">
+                    <li><a href="#beranda" class="text-white hover:text-primary transition-colors duration-300">Beranda</a></li>
+                    <li><a href="#tentangsaya" class="text-white hover:text-primary transition-colors duration-300">Tentang Saya</a></li>
+                    <li><a href="#portfolio" class="text-white hover:text-primary transition-colors duration-300">Proyek</a></li>
+                    <li><a href="#kontak" class="text-white hover:text-primary transition-colors duration-300">Kontak</a></li>
+                </ul>
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div class="container-fluid container-xl position-relative d-flex align-items-center">
-  
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <img src="{% static 'assets/img/logo.png' %}" alt="">
-          <h1 class="sitename">QuickStart</h1>
-        </a>
-  
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="index.html#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-  
-        <a class="btn-getstarted" href="index.html#about">Get Started</a>
-  
-      </div>
+                <button id="hamburger-btn" class="md:hidden text-white focus:outline-none z-50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/80 backdrop-blur-sm">
+            <ul class="flex flex-col items-center space-y-6 py-8 nav-links">
+                <li><a href="#beranda" class="text-white font-semibold">Beranda</a></li>
+                <li><a href="#tentangsaya" class="text-white hover:text-primary">Tentang Saya</a></li>
+                <li><a href="#portfolio" class="text-white hover:text-primary">Proyek</a></li>
+                <li><a href="#kontak" class="text-white hover:text-primary">Kontak</a></li>
+            </ul>
+        </div>
     </header>
-    <main class="main">
-        <!-- Features Section -->
-    <section id="features" class="features section">
 
-    {% block isi %}
-
-    {% endblock isi %}
-    </section>
+    <main class="flex-grow">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
 
+    {% include '_footer.html' %}
+<script>
+    const header = document.getElementById('header');
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('main section');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('bg-slate-900/80', 'backdrop-blur-sm', 'shadow-lg');
+        } else {
+            header.classList.remove('bg-slate-900/80', 'backdrop-blur-sm', 'shadow-lg');
+        }
+    });
+
+    hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+
+            if (pageYOffset >= sectionTop - 96) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('font-bold', 'text-primary');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('font-bold', 'text-primary');
+            }
+        });
+    });
 
 
-    <footer id="footer" class="footer position-relative light-background">
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-        <div class="container footer-top">
-          <div class="row gy-4">
-            <div class="col-lg-4 col-md-6 footer-about">
-              <a href="index.html" class="logo d-flex align-items-center">
-                <span class="sitename">QuickStart</span>
-              </a>
-              <div class="footer-contact pt-3">
-                <p>A108 Adam Street</p>
-                <p>New York, NY 535022</p>
-                <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                <p><strong>Email:</strong> <span>info@example.com</span></p>
-              </div>
-              <div class="social-links d-flex mt-4">
-                <a href=""><i class="bi bi-twitter-x"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-    
-            <div class="col-lg-2 col-md-3 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Terms of service</a></li>
-                <li><a href="#">Privacy policy</a></li>
-              </ul>
-            </div>
-    
-            <div class="col-lg-2 col-md-3 footer-links">
-              <h4>Our Services</h4>
-              <ul>
-                <li><a href="#">Web Design</a></li>
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">Product Management</a></li>
-                <li><a href="#">Marketing</a></li>
-                <li><a href="#">Graphic Design</a></li>
-              </ul>
-            </div>
-    
-            <div class="col-lg-4 col-md-12 footer-newsletter">
-              <h4>Our Newsletter</h4>
-              <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-              <form action="forms/newsletter.php" method="post" class="php-email-form">
-                <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-              </form>
-            </div>
-    
-          </div>
-        </div>
-    
-        <div class="container copyright text-center mt-4">
-          <p>© <span>Copyright</span> <strong class="px-1 sitename">QuickStart</strong><span>All Rights Reserved</span></p>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you've purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-    
-      </footer>
-    
-      <!-- Scroll Top -->
-      <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-    
-      <!-- Preloader -->
-      <div id="preloader"></div>
-    
-      <!-- Vendor JS Files -->
-      <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-      <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-      <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-      <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-      <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-    
-      <!-- Main JS File -->
-      <script src="{% static 'assets/js/main.js' %}"></script>
-    
-    </body>
-    
-    </html>
+            const targetElement = document.querySelector(this.getAttribute('href'));
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
